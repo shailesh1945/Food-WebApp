@@ -1,3 +1,49 @@
+/* Keep table cells aligned properly */
 .table td {
-    vertical-align: middle;
+  vertical-align: middle;
+}
+
+/* Order card styling */
+.card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 128, 0, 0.15);
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+/* Refresh button styling */
+.btn-warning {
+  background-color: #008000 !important;
+  border-color: #008000 !important;
+  color: white !important;
+  transition: 0.3s;
+}
+
+.btn-warning:hover {
+  background-color: #006400 !important;
+  border-color: #006400 !important;
+}
+
+/* Status dot + text */
+td.fw-bold {
+  color: #008000;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+
+/* Table spacing improvements */
+.table {
+  border-spacing: 0 12px;
+  border-collapse: separate;
+}
+
+.table tr {
+  background-color: #f8fff8;
+  border-radius: 12px;
+}
+
+/* Delivery icon */
+td img {
+  border-radius: 8px;
 }

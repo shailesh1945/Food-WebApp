@@ -28,31 +28,73 @@ const FoodDetails = () => {
     increaseQty(data.id);
     navigate("/cart");
   };
+
+  // ✅ Inline styles for green theme
+  const styles = {
+    image: {
+      borderRadius: "18px",
+      boxShadow: "0 4px 15px rgba(0,0,0,0.12)",
+    },
+    categoryBadge: {
+      backgroundColor: "#4CAF50",
+      padding: "6px 12px",
+      borderRadius: "6px",
+      color: "white",
+      fontWeight: 500,
+    },
+    button: {
+      border: "2px solid #4CAF50",
+      color: "#4CAF50",
+      borderRadius: "10px",
+      padding: "10px 18px",
+      fontWeight: 600,
+      transition: "0.25s ease",
+    },
+    buttonHover: {
+      backgroundColor: "#4CAF50",
+      color: "white",
+    },
+    section: {
+      backgroundColor: "#f5fff7",
+      borderRadius: "20px",
+      padding: "25px",
+    },
+  };
+
   return (
     <section className="py-5">
-      <div className="container px-4 px-lg-5 my-5">
+      <div className="container px-4 px-lg-5 my-5" style={styles.section}>
         <div className="row gx-4 gx-lg-5 align-items-center">
           <div className="col-md-6">
             <img
               className="card-img-top mb-5 mb-md-0"
               src={data.imageUrl}
-              alt="..."
+              alt={data.name}
+              style={styles.image}
             />
           </div>
           <div className="col-md-6">
             <div className="fs-5 mb-1">
               Category:{" "}
-              <span className="badge text-bg-warning">{data.category}</span>
+              <span style={styles.categoryBadge}>{data.category}</span>
             </div>
             <h1 className="display-5 fw-bolder">{data.name}</h1>
-            <div className="fs-5 mb-2">
-              <span>&#8377;{data.price}.00</span>
+            <div className="fs-4 mb-2 fw-semibold text-success">
+              ₹{data.price}.00
             </div>
-            <p className="lead">{data.description}</p>
+            <p className="lead text-secondary">{data.description}</p>
+
             <div className="d-flex">
               <button
-                className="btn btn-outline-dark flex-shrink-0"
+                className="btn flex-shrink-0"
                 type="button"
+                style={styles.button}
+                onMouseEnter={(e) =>
+                  Object.assign(e.target.style, styles.buttonHover)
+                }
+                onMouseLeave={(e) =>
+                  Object.assign(e.target.style, styles.button)
+                }
                 onClick={addToCart}
               >
                 <i className="bi-cart-fill me-1"></i>

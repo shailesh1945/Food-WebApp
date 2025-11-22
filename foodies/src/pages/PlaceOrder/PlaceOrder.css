@@ -1,0 +1,78 @@
+/* Page spacing */
+.container {
+  max-width: 1100px;
+}
+
+/* Center logo section */
+.text-center img {
+  border-radius: 12px;
+}
+
+/* Billing form card styling */
+form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 128, 0, 0.12);
+}
+
+/* Input styling */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+/* Input focus behavior */
+.form-control:focus,
+.form-select:focus {
+  border-color: #008000;
+  box-shadow: 0 0 6px rgba(0, 128, 0, 0.35);
+}
+
+/* Cart summary right panel */
+.list-group-item {
+  border: none;
+  padding: 1rem 1.2rem;
+}
+
+/* Highlight totals with soft green background */
+.list-group-item:last-child {
+  background: #f1fff1;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+/* Section title */
+h4 span.text-primary {
+  color: #008000 !important;
+}
+
+/* Cart item count badge */
+.badge.bg-primary {
+  background-color: #008000 !important;
+}
+
+/* Checkout button — bold green */
+.btn-primary {
+  background-color: #008000 !important;
+  border-color: #008000 !important;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #006400 !important;
+  border-color: #006400 !important;
+}
+
+/* Divider styling */
+hr {
+  border-top: 2px solid #e2e2e2;
+  opacity: 1;
+  margin: 1.5rem 0;
+}

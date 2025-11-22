@@ -1,12 +1,53 @@
-.header {
-    padding: 5rem;
-    margin-bottom: 1rem;
-    border-radius: 0.3rem;
-    margin-top: 0.25rem;
-    color: white;
-    background-image: url("../../assets/header.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+:root {
+  --primary-green: #4CAF50;
+  --primary-green-dark: #2E7D32;
+  --light-overlay: rgba(76, 175, 80, 0.25);
 }
-  
+
+/* Header section */
+.header {
+  padding: 6rem 4rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 20px;
+  color: #1A1A1A;
+  background-image: linear-gradient(
+      to bottom right,
+      var(--light-overlay),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../../assets/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.header h1 {
+  font-weight: 700;
+  color: var(--primary-green-dark);
+}
+
+/* Subtext */
+.header p {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 520px;
+}
+
+/* Explore Button */
+.header .btn-primary {
+  background: var(--primary-green);
+  border-color: var(--primary-green);
+  font-weight: 600;
+  padding: 10px 26px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.header .btn-primary:hover {
+  background: var(--primary-green-dark);
+  border-color: var(--primary-green-dark);
+  transform: translateY(-2px);
+}

@@ -1,48 +1,77 @@
+:root {
+  --primary-green: #4CAF50;
+  --primary-green-dark: #2E7D32;
+  --text-muted: #6c757d;
+  --light-green-bg: #E9F7EF;
+}
+
+/* Hide scrollbar */
 .explore-menu-list::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 .explore-menu-list {
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
+/* Menu container */
+.explore-menu {
+  padding: 2rem 0;
+}
+
+/* Category icons */
 .explore-menu-list-item img {
-    cursor: pointer;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.25s ease;
 }
 
+/* Active category image border */
 .explore-menu-list-item .active {
-    border: 5px solid tomato;
-    padding: 2px;
+  border: 4px solid var(--primary-green);
+  padding: 4px;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.35);
 }
 
+/* Category text */
 .explore-menu-list-item p {
-    color: #747474;
-    cursor: pointer;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: 0.25s ease;
 }
 
+/* Active category text */
+.explore-menu-list-item .text-active {
+  color: var(--primary-green);
+}
+
+/* Scroll arrows */
 .scroll-icon {
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: 10px;
-    color: #747474;
-    transition: color 0.2s;
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: 14px;
+  color: var(--text-muted);
+  transition: 0.25s ease;
 }
 
 .scroll-icon:hover {
-    color: tomato;
+  color: var(--primary-green);
 }
 
+/* Section divider */
 .explore-menu hr {
-    margin: 10px 0px;
-    height: 2px;
-    background-color: #e2e2e2;
-    border: none;
+  margin: 18px 0;
+  height: 2px;
+  background-color: #d7e9dd;
+  border: none;
 }
 
-.explore-menu-list-item .active {
-    border: 4px solid tomato;
+/* Heading & subtext */
+.explore-menu h1 {
+  font-weight: 700;
+  color: var(--primary-green-dark);
 }
 
-.explore-menu-list-item .text-active {
-    color: tomato;
+.explore-menu p {
+  font-size: 1.1rem;
+  color: #2a2a2a;
 }
